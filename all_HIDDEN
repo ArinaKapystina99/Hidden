@@ -1,0 +1,17 @@
+$("body").on("change", "input#all_HIDDEN:checkbox", function (event)
+    {
+        event.preventDefault();
+        event.stopPropagation();
+
+        if ($(this).is(":checked"))
+        {
+            $("input.product_hidden:checkbox")
+                .prop("checked", true)
+                .change();
+        } else
+        {
+            $("input.product_hidden:checkbox")
+                .prop("checked", false)
+                .change();
+        }
+    });
